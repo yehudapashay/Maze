@@ -1,0 +1,56 @@
+/*
+.root{
+    -fx-background-color: bisque;
+}
+
+Button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+Button:hover{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; / 4 8 4 8 /
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+*/
+.root {
+    -fx-background-image: url("backGround.jpg");
+    -fx-background-size: stretch;
+}
+
+#btn_generateMaze {
+    -fx-background-color: #ffffe6;
+    -fx-font-family: Arial;
+    -fx-font-size: 12px;
+    -fx-text-fill: #3d3d29;
+    -fx-border-color: #d6d6c2;
+    -fx-border-radius: 5px;
+}
+
+#btn_generateMaze:hover {
+    -fx-background-color: #ffff99;
+    -fx-text-fill: #000000;
+}
+
+#btn_solveMaze {
+    -fx-background-color: #ffffe6;
+    -fx-font-family: Arial;
+    -fx-font-size: 12px;
+    -fx-text-fill: #3d3d29;
+    -fx-border-color: #d6d6c2;
+    -fx-border-radius: 5px;
+}
+
+#btn_solveMaze:hover {
+    -fx-background-color: #ffff99;
+    -fx-text-fill: #000000;
+}
+

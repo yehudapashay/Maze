@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplayer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressed" prefHeight="587.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+    <top>
+        <MenuBar prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="newmaze" mnemonicParsing="false" onAction="#newMaze" text="New" />
+                        <MenuItem fx:id="savebtn" mnemonicParsing="false" onAction="#saveTheMaze" text="Save" />
+                        <MenuItem fx:id="loadbtn" mnemonicParsing="false" onAction="#loadTheMaze" text="Load" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Options">
+                    <items>
+                        <MenuItem fx:id="propertiesgame" mnemonicParsing="false" onAction="#propertiesEvent" text="Properties" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exit">
+                    <items>
+                        <MenuItem fx:id="exitgame" mnemonicParsing="false" onAction="#closeEvent" text="Exit Game" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="helpgame" mnemonicParsing="false" onAction="#helpEvent" text="Help" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="About">
+                    <items>
+                        <MenuItem fx:id="aboutgame" mnemonicParsing="false" onAction="#aboutEvent" text="Project Information" />
+                    </items>
+                </Menu>
+            </menus>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefHeight="556.0" prefWidth="244.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefHeight="350.0" prefWidth="219.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="118.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets left="15.0" right="10.0" top="100.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label fx:id="lbl_rowsNum" text="Row Size:" textFill="#100e82" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_columnsNum" text="Columns Size:" textFill="#100e82" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtfld_rowsNum" prefHeight="25.0" prefWidth="81.0" promptText="Rows size" text="15" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Arial" size="12.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtfld_columnsNum" prefHeight="26.0" prefWidth="75.0" promptText="Columns size" text="15" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Arial" size="12.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="btn_generateMaze" mnemonicParsing="false" onAction="#generateMaze" prefHeight="25.0" prefWidth="219.0" text="Generate Maze" textFill="#230ee1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_solveMaze" disable="true" mnemonicParsing="false" onAction="#solveMaze" prefHeight="26.0" prefWidth="119.0" text="Solve Maze" textFill="#0d0de4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </GridPane>
+                <Label prefHeight="96.0" prefWidth="222.0" text="Copyright © 2018 Lior Pizman and Yehuda Pashay" textFill="#faff00">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets top="280.0" />
+                    </padding>
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <Pane BorderPane.alignment="CENTER">
+            <children>
+                <MazeDisplayer fx:id="mazeDisplayer" onScroll="#scrollMouse"  onMousePressed="#mousePressed" onMouseDragged="#mouseDragged" height="500.0" imageCharacter="resources/Images/character.jpg" imageGoalPosition="resources/Images/goal.jpg" imageSolution="resources/Images/solution.jpg" imageWall="resources/Images/wall.jpg" width="500.0" />
+            </children>
+        </Pane>
+    </center>
+
+</BorderPane>
